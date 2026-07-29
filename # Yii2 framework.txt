@@ -1,0 +1,56 @@
+# Yii2 framework
+/vendor/
+/composer.lock
+
+# Runtime files
+/runtime/
+/web/assets/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Local configuration
+/config/db-local.php
+/config/local.php
+
+# IDE files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+
+# Cache
+*.cache
+*.tmp
+
+# Node modules (if using frontend tools)
+/node_modules/
+
+# Uploaded files / user generated content
+/web/uploads/*
+!/web/uploads/.gitkeep
+
+# Database dumps
+*.sql
+*.zip
+*.tar.gz
+
+# PHPUnit
+.phpunit.result.cache
+
+# Composer temporary files
+composer.phar
+
+# Yii generated files
+/yii-debug-toolbar/
+/yii2-debug.log
