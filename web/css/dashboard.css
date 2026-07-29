@@ -1,0 +1,789 @@
+/* =====================================================
+   HEALTH ANALYTICS HOSPITAL SYSTEM
+   MAIN DASHBOARD STYLE
+===================================================== */
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter','Segoe UI',sans-serif;
+}
+
+
+body.hospital-body{
+
+    background:#f4fbf9;
+
+    color:#1f2937;
+
+    min-height:100vh;
+
+}
+
+
+
+/* ==============================
+   MAIN WRAPPER
+================================*/
+
+
+.hospital-wrapper{
+
+    display:flex;
+
+    min-height:100vh;
+
+}
+
+
+
+
+
+/* ==============================
+   SIDEBAR
+================================*/
+
+
+.hospital-sidebar{
+
+
+    width:270px;
+
+    background:
+    linear-gradient(
+        180deg,
+        #063b36,
+        #087f70
+    );
+
+
+    color:white;
+
+    position:fixed;
+
+    left:0;
+
+    top:0;
+
+    bottom:0;
+
+    padding:25px 18px;
+
+    box-shadow:
+    0 10px 40px rgba(0,0,0,.15);
+
+    z-index:1000;
+
+}
+
+
+
+
+
+.brand{
+
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-bottom:35px;
+
+}
+
+
+
+
+
+.logo-circle{
+
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:50%;
+
+    background:white;
+
+    color:#087f70;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:24px;
+
+}
+
+
+
+
+.brand h4{
+
+    font-size:18px;
+
+    margin:0;
+
+    font-weight:700;
+
+}
+
+
+
+.brand span{
+
+    font-size:12px;
+
+    opacity:.8;
+
+}
+
+
+
+
+
+
+/* ==============================
+ MENU
+================================*/
+
+
+.menu{
+
+    list-style:none;
+
+    padding:0;
+
+}
+
+
+
+.menu li{
+
+
+    margin-bottom:8px;
+
+}
+
+
+
+
+
+.menu a{
+
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+
+    padding:13px 15px;
+
+
+    border-radius:12px;
+
+
+    color:white;
+
+
+    text-decoration:none;
+
+
+    transition:.3s;
+
+
+    font-size:14px;
+
+}
+
+
+
+
+
+.menu a i{
+
+
+    font-size:18px;
+
+}
+
+
+
+
+
+.menu a:hover,
+.menu a.active{
+
+
+    background:
+    rgba(255,255,255,.18);
+
+
+    transform:translateX(5px);
+
+
+}
+
+
+
+
+
+.sidebar-footer{
+
+
+    position:absolute;
+
+    bottom:25px;
+
+    width:85%;
+
+}
+
+
+
+.sidebar-footer a{
+
+
+    color:white;
+
+    text-decoration:none;
+
+    display:flex;
+
+    gap:10px;
+
+    padding:12px;
+
+    border-radius:10px;
+
+    background:
+    rgba(255,255,255,.15);
+
+}
+
+
+
+
+
+/* ==============================
+ MAIN SECTION
+================================*/
+
+
+.hospital-main{
+
+
+    margin-left:270px;
+
+    width:calc(100% - 270px);
+
+
+}
+
+
+
+
+
+
+
+/* ==============================
+ TOP BAR
+================================*/
+
+
+.topbar{
+
+
+    height:80px;
+
+
+    background:white;
+
+
+    display:flex;
+
+
+    justify-content:space-between;
+
+
+    align-items:center;
+
+
+    padding:0 30px;
+
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,.05);
+
+
+}
+
+
+
+
+
+.search-box{
+
+
+    background:#f1f7f6;
+
+
+    border-radius:14px;
+
+
+    padding:12px 18px;
+
+
+    width:420px;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:12px;
+
+
+}
+
+
+
+
+.search-box input{
+
+
+    border:none;
+
+
+    outline:none;
+
+
+    background:none;
+
+
+    width:100%;
+
+
+    font-size:14px;
+
+
+}
+
+
+
+
+
+.top-actions{
+
+
+    display:flex;
+
+    align-items:center;
+
+    gap:25px;
+
+}
+
+
+
+
+
+.notification-btn{
+
+
+    position:relative;
+
+    width:45px;
+
+    height:45px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#e8f8f5;
+
+    color:#087f70;
+
+    font-size:20px;
+
+
+}
+
+
+
+
+.notification-btn span{
+
+
+    position:absolute;
+
+    top:-5px;
+
+    right:-3px;
+
+
+    background:#ef4444;
+
+
+    color:white;
+
+
+    width:20px;
+
+    height:20px;
+
+    border-radius:50%;
+
+
+    font-size:11px;
+
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+
+}
+
+
+
+
+
+
+.profile{
+
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+
+
+
+.profile img{
+
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+}
+
+
+
+
+
+.profile small{
+
+    display:block;
+
+    color:#6b7280;
+
+}
+
+
+
+
+
+
+
+
+/* ==============================
+ CONTENT
+================================*/
+
+
+.content-area{
+
+
+    padding:30px;
+
+    min-height:calc(100vh - 130px);
+
+
+}
+
+
+
+
+
+
+
+/* ==============================
+ DASHBOARD CARDS
+================================*/
+
+
+.analytics-card{
+
+
+    background:white;
+
+
+    border-radius:20px;
+
+
+    padding:25px;
+
+
+    box-shadow:
+
+
+    0 10px 30px rgba(0,0,0,.06);
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.analytics-card:hover{
+
+
+    transform:translateY(-6px);
+
+
+}
+
+
+
+
+
+
+.card-icon{
+
+
+    width:50px;
+
+    height:50px;
+
+    border-radius:15px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:22px;
+
+    background:#e7f8f4;
+
+    color:#087f70;
+
+
+}
+
+
+
+
+
+
+/* ==============================
+ CHART BOX
+================================*/
+
+
+.chart-box{
+
+
+    background:white;
+
+
+    padding:25px;
+
+
+    border-radius:20px;
+
+
+    box-shadow:
+
+    0 10px 25px rgba(0,0,0,.05);
+
+
+}
+
+
+
+
+
+.chart-box h5{
+
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+
+
+
+
+/* ==============================
+ TABLES
+================================*/
+
+
+.table-container{
+
+
+    background:white;
+
+
+    padding:25px;
+
+
+    border-radius:20px;
+
+
+    box-shadow:
+
+    0 10px 25px rgba(0,0,0,.05);
+
+
+}
+
+
+
+.table thead{
+
+
+    background:#e8f8f5;
+
+
+}
+
+
+
+
+
+
+
+/* ==============================
+ AI PANEL
+================================*/
+
+
+.ai-panel{
+
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #087f70,
+        #10b981
+    );
+
+
+    color:white;
+
+
+    border-radius:20px;
+
+
+    padding:25px;
+
+
+}
+
+
+
+
+
+
+
+/* ==============================
+ FOOTER
+================================*/
+
+
+.hospital-footer{
+
+
+    text-align:center;
+
+
+    padding:20px;
+
+
+    color:#6b7280;
+
+
+    font-size:13px;
+
+
+}
+
+
+
+
+
+
+
+/* ==============================
+ RESPONSIVE
+================================*/
+
+
+@media(max-width:900px){
+
+
+
+.hospital-sidebar{
+
+
+    transform:translateX(-100%);
+
+}
+
+
+
+.hospital-main{
+
+
+    margin-left:0;
+
+    width:100%;
+
+}
+
+
+
+.search-box{
+
+    width:200px;
+
+}
+
+
+
+}
+
+
