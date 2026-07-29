@@ -1,234 +1,520 @@
+# 🏥 Health Analytics System (HAS)
+
 <p align="center">
-    <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://www.yiiframework.com/image/design/logo/yii3_full_for_dark.svg">
-        <source media="(prefers-color-scheme: light)" srcset="https://www.yiiframework.com/image/design/logo/yii3_full_for_light.svg">
-        <img src="https://www.yiiframework.com/image/design/logo/yii3_full_for_light.svg" alt="Yii Framework" height="100">
-    </picture>
-    <h1 align="center">Yii 2 Basic Project Template</h1>
-    <br>
+    <img src="https://www.yiiframework.com/image/design/logo/yii2.svg" width="180" alt="Yii2 Framework">
 </p>
 
-Yii 2 Basic Project Template is a skeleton [Yii 2](https://www.yiiframework.com/) application best for
-rapidly creating small projects.
+<h1 align="center">
+Health Analytics System
+</h1>
 
-The template contains the basic features including user login/logout and a contact page.
-It includes all commonly used configurations that would allow you to focus on adding new
-features to your application.
+<p align="center">
+A Modern Hospital Management & Clinical Analytics Platform Built with Yii2 Framework
+</p>
 
-[![Latest Stable Version](https://img.shields.io/packagist/v/yiisoft/yii2-app-basic.svg?style=for-the-badge&label=Stable&logo=packagist)](https://packagist.org/packages/yiisoft/yii2-app-basic)
-[![Total Downloads](https://img.shields.io/packagist/dt/yiisoft/yii2-app-basic.svg?style=for-the-badge&label=Downloads)](https://packagist.org/packages/yiisoft/yii2-app-basic)
-[![build](https://img.shields.io/github/actions/workflow/status/yiisoft/yii2-app-basic/build.yml?style=for-the-badge&logo=github&label=Build)](https://github.com/yiisoft/yii2-app-basic/actions?query=workflow%3Abuild)
-[![codecov](https://img.shields.io/codecov/c/github/yiisoft/yii2-app-basic.svg?style=for-the-badge&logo=codecov&logoColor=white&label=Codecov)](https://codecov.io/gh/yiisoft/yii2-app-basic)
-[![Static Analysis](https://img.shields.io/github/actions/workflow/status/yiisoft/yii2-app-basic/static.yml?style=for-the-badge&label=Static)](https://github.com/yiisoft/yii2-app-basic/actions/workflows/static.yml)
 
-<picture>
-    <source media="(prefers-color-scheme: dark)" srcset="docs/images/home-dark.png">
-    <source media="(prefers-color-scheme: light)" srcset="docs/images/home-light.png">
-    <img src="docs/images/home-light.png" alt="Web Application Basic">
-</picture>
+<p align="center">
 
-## Docker
+![PHP](https://img.shields.io/badge/PHP-8.2-blue?style=for-the-badge&logo=php)
 
-[![Apache](https://img.shields.io/github/actions/workflow/status/yiisoft/yii2-app-basic/docker.yml?style=for-the-badge&logo=apache&label=Apache)](https://github.com/yiisoft/yii2-app-basic/actions/workflows/docker.yml)
+![Yii2](https://img.shields.io/badge/Yii2-Framework-green?style=for-the-badge)
 
-DIRECTORY STRUCTURE
--------------------
+![MySQL](https://img.shields.io/badge/MySQL-Database-orange?style=for-the-badge&logo=mysql)
 
-      assets/             contains assets definition
-      commands/           contains console commands (controllers)
-      config/             contains application configurations
-      controllers/        contains Web controller classes
-      mail/               contains view files for e-mails
-      models/             contains model classes
-      runtime/            contains files generated during runtime
-      tests/              contains various tests for the basic application
-      vendor/             contains dependent 3rd-party packages
-      views/              contains view files for the Web application
-      web/                contains the entry script and Web resources
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5-purple?style=for-the-badge&logo=bootstrap)
 
-REQUIREMENTS
-------------
+![GitHub](https://img.shields.io/badge/GitHub-Version_Control-black?style=for-the-badge&logo=github)
 
-The minimum requirement by this project template that your Web server supports PHP 8.2.
+</p>
 
-INSTALLATION
-------------
 
-> [!IMPORTANT]
-> - The minimum required [PHP](https://www.php.net/) version of Yii is PHP `8.2`.
+---
 
-## Install via Composer
+# 📌 About The Project
 
-If you do not have [Composer](https://getcomposer.org/), you may install it by following the instructions
-at [getcomposer.org](https://getcomposer.org/doc/00-intro.md#installation-nix).
+**Health Analytics System (HAS)** is a modern Hospital Management Information System designed to digitize healthcare operations, improve patient care workflows, and provide real-time clinical analytics.
 
-You can then install this project template using the following command:
+The platform integrates all major hospital departments into one connected workflow:
 
-~~~
-composer create-project --prefer-dist yiisoft/yii2-app-basic basic
-~~~
-
-Now you should be able to access the application through the following URL, assuming `basic` is the directory
-directly under the Web root.
-
-~~~
-http://localhost/basic/web/
-~~~
-
-## Install from an Archive File
-
-Extract the archive file downloaded from [yiiframework.com](https://www.yiiframework.com/download/) to
-a directory named `basic` that is directly under the Web root.
-
-Set cookie validation key in `config/web.php` file to some random secret string:
-
-```php
-'request' => [
-    // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-    'cookieValidationKey' => '<secret random string goes here>',
-],
+```
+Patient Registration
+        |
+        ↓
+Nursing Assessment
+        |
+        ↓
+Doctor Consultation
+        |
+        ↓
+Laboratory Investigation
+        |
+        ↓
+Pharmacy Management
+        |
+        ↓
+Billing
+        |
+        ↓
+Admission / Discharge
 ```
 
-You can then access the application through the following URL:
-
-~~~
-http://localhost/basic/web/
-~~~
-
-## Install with Docker
-
-Update your vendor packages
-
-    docker-compose run --rm php composer update --prefer-dist
-    
-Run the installation triggers (creating cookie validation code)
-
-    docker-compose run --rm php composer install    
-    
-Start the container
-
-    docker-compose up -d
-    
-You can then access the application through the following URL:
-
-    http://127.0.0.1:8000
-
-Run tests inside the container
-
-    docker compose exec -T php vendor/bin/codecept build
-    docker compose exec -T php vendor/bin/codecept run
-
-**NOTES:** 
-- Minimum required Docker engine version `17.04` for development (see [Performance tuning for volume mounts](https://docs.docker.com/docker-for-mac/osxfs-caching/))
-- The default configuration uses a host-volume in your home directory `~/.composer-docker/cache` for Composer caches
+The system is built using **Yii2 MVC Architecture**, PHP 8.2+, MySQL/MariaDB, Bootstrap 5 and modern web technologies.
 
 
-CONFIGURATION
--------------
+---
+
+# 🚀 Main Features
+
+
+# 👥 User Management
+
+Supported system roles:
+
+- Super Administrator
+- Hospital Administrator
+- Receptionist
+- Nurse
+- Doctor
+- Laboratory Technician
+- Pharmacist
+- Cashier
+- Radiologist
+- Store Keeper
+
+
+Features:
+
+- User authentication
+- Role-based access control
+- Permission management
+- Activity tracking
+- Audit logs
+
+
+---
+
+# 🏥 Patient Management
+
+Features:
+
+- Patient registration
+- Patient profiles
+- Medical history
+- Visit records
+- Emergency information
+- Patient tracking
+- Patient queue management
+
+
+---
+
+# 👩‍⚕️ Nursing Module
+
+Includes:
+
+- Patient queue management
+- Vital signs recording
+- Temperature
+- Blood pressure
+- Pulse rate
+- Oxygen saturation
+- Nurse clinical notes
+- Patient monitoring
+
+
+---
+
+# 👨‍⚕️ Doctor Module
+
+Features:
+
+- Doctor worklist
+- Consultation queue
+- Clinical assessment
+- Diagnosis management
+- Clinical notes
+- Prescription creation
+- Laboratory requests
+- Treatment planning
+
+
+---
+
+# 🧪 Laboratory Management
+
+Includes:
+
+- Laboratory test requests
+- Sample tracking
+- Laboratory workflow
+- Results management
+- Test history
+- Doctor result review
+
+
+---
+
+# 💊 Pharmacy Management
+
+Features:
+
+- Prescription processing
+- Medicine inventory
+- Dispensing management
+- Stock monitoring
+- Medicine tracking
+
+
+---
+
+# 💰 Billing System
+
+Includes:
+
+- Invoice generation
+- Payment processing
+- Billing history
+- Revenue reports
+- Financial tracking
+
+
+---
+
+# 🛏 Admission & Discharge Management
+
+Features:
+
+- Patient admission
+- Ward management
+- Recovery tracking
+- Discharge summaries
+- Patient outcome records
+
+
+---
+
+# 📊 Analytics Dashboard
+
+Health Analytics System provides healthcare intelligence dashboards:
+
+Features:
+
+- Total patient statistics
+- Daily patient flow
+- Department performance
+- Clinical activity monitoring
+- Disease analytics
+- Revenue insights
+- Patient risk indicators
+- Hospital workflow analytics
+
+
+---
+
+# 🏗 System Architecture
+
+Health Analytics System follows MVC Architecture:
+
+
+```
+                User Interface
+
+                      |
+
+                      ↓
+
+               Controllers
+
+                      |
+
+                      ↓
+
+                  Models
+
+                      |
+
+                      ↓
+
+                Database
+```
+
+
+Hospital workflow architecture:
+
+
+```
+Reception
+    |
+    ↓
+Nurse
+    |
+    ↓
+Doctor
+    |
+    ↓
+Laboratory
+    |
+    ↓
+Pharmacy
+    |
+    ↓
+Billing
+    |
+    ↓
+Discharge
+```
+
+
+---
+
+# 🛠 Technology Stack
+
+
+## Backend
+
+- PHP 8.2+
+- Yii2 Framework
+- MVC Architecture
+
 
 ## Database
 
-Edit the file `config/db.php` with real data, for example:
+- MySQL
+- MariaDB
+
+
+## Frontend
+
+- HTML5
+- CSS3
+- Bootstrap 5
+- JavaScript
+- Chart.js
+
+
+## Development Tools
+
+- XAMPP
+- Composer
+- Git
+- GitHub
+- Visual Studio Code
+
+
+---
+
+# 📋 Database Modules
+
+
+Main database tables include:
+
+
+```
+users
+roles
+departments
+
+patients
+patient_visits
+patient_queue
+
+appointments
+
+medical_records
+vital_signs
+
+diagnoses
+
+prescriptions
+
+lab_requests
+lab_results
+lab_tests
+
+medicines
+
+billing
+
+admissions
+recoveries
+discharges
+
+audit_logs
+```
+
+
+---
+
+# 📂 Project Structure
+
+
+```
+health-analytics/
+
+├── assets/
+├── commands/
+├── config/
+├── controllers/
+├── migrations/
+├── models/
+├── runtime/
+├── tests/
+├── vendor/
+├── views/
+├── web/
+│
+├── composer.json
+├── yii
+└── README.md
+```
+
+
+---
+
+# ⚙ Installation
+
+
+## Requirements
+
+Before installation make sure you have:
+
+
+- PHP >= 8.2
+- Composer
+- MySQL/MariaDB
+- XAMPP
+
+
+---
+
+## Clone Repository
+
+
+```bash
+git clone https://github.com/danielmwajombe7-stack/health-analytics.git
+```
+
+
+Move into project:
+
+
+```bash
+cd health-analytics
+```
+
+
+---
+
+## Install Dependencies
+
+
+```bash
+composer install
+```
+
+
+---
+
+# 🗄 Database Configuration
+
+
+Edit:
+
+
+```
+config/db.php
+```
+
+
+Example:
+
 
 ```php
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=localhost;dbname=yii2basic',
+    'dsn' => 'mysql:host=localhost;dbname=health_analytics',
     'username' => 'root',
-    'password' => '1234',
+    'password' => '',
     'charset' => 'utf8',
 ];
 ```
 
-**NOTES:**
-- Yii won't create the database for you, this has to be done manually before you can access it.
-- Check and edit the other files in the `config/` directory to customize your application as required.
-- Refer to the README in the `tests` directory for information specific to basic application tests.
 
-TESTING
--------
+Import database:
 
-Tests are located in `tests` directory. They are developed with [Codeception PHP Testing Framework](https://codeception.com/).
-By default, there are 3 test suites:
-
-- `unit`
-- `functional`
-- `acceptance`
-
-Tests can be executed by running
 
 ```
-vendor/bin/codecept run --env php-builtin
+health_analytics.sql
 ```
 
-The command above will execute unit and functional tests. Unit tests are testing the system components, while functional
-tests are for testing user interaction.
+
+---
+
+# ▶ Running The System
 
 
-## Acceptance tests
-
-The `acceptance` suite is configured in `tests/Acceptance.suite.yml`.
-
-### Acceptance tests (PhpBrowser)
-
-By default, acceptance tests use the `PhpBrowser` module and run against the built-in PHP web server started via the
-`php-builtin` environment.
+Start XAMPP:
 
 ```
-# run all tests with built-in web server
-composer tests
-
-# run acceptance tests only
-vendor/bin/codecept run Acceptance --env php-builtin
+Apache
+MySQL
 ```
 
-### Acceptance tests (WebDriver + Selenium)
 
-To run acceptance tests in a real browser, switch the `acceptance` suite to use the `WebDriver` module.
-`tests/Acceptance.suite.yml` contains an example WebDriver configuration (commented).
+Open browser:
 
-1. Download and start [Selenium Server](https://www.selenium.dev/downloads/).
-2. Install the corresponding browser driver (for example. [GeckoDriver](https://github.com/mozilla/geckodriver/releases) or
-   [ChromeDriver](https://googlechromelabs.github.io/chrome-for-testing/)).
-3. Update `tests/Acceptance.suite.yml` to enable `WebDriver` and disable `PhpBrowser`.
-4. Run:
 
 ```
-vendor/bin/codecept run Acceptance --env php-builtin
+http://localhost/health-analytics/web/
 ```
 
-## Code coverage support
 
-Code coverage is configured in `codeception.yml`. You can run your tests and collect coverage with the following command:
+---
 
-```
-#collect coverage for all tests
-vendor/bin/codecept run --coverage --coverage-html --coverage-xml --env php-builtin
+# 🔐 Security Features
 
-#collect coverage only for unit tests
-vendor/bin/codecept run Unit --coverage --coverage-html --coverage-xml --env php-builtin
 
-#collect coverage for unit and functional tests
-vendor/bin/codecept run Functional,Unit --coverage --coverage-html --coverage-xml --env php-builtin
-```
+Implemented security:
 
-You can see code coverage output under the `tests/Support/output` directory.
+- User authentication
+- Password hashing
+- Role Based Access Control
+- Permission management
+- Audit logging
+- Secure database access
 
-## Documentation
 
-- [Internals](docs/internals.md)
+---
 
-## Support the project
+# 🚀 Future Improvements
 
-[![Open Collective](https://img.shields.io/badge/Open%20Collective-sponsor-7eadf1?style=for-the-badge&logo=open%20collective&logoColor=7eadf1&labelColor=555555)](https://opencollective.com/yiisoft)
 
-## Follow updates
+Planned upgrades:
 
-[![Official website](https://img.shields.io/badge/Powered_by-Yii_Framework-green.svg?style=for-the-badge&logo=yii)](https://www.yiiframework.com/)
-[![Follow on X](https://img.shields.io/badge/-Follow%20on%20X-1DA1F2.svg?style=for-the-badge&logo=x&logoColor=white&labelColor=000000)](https://x.com/yiiframework)
-[![Telegram](https://img.shields.io/badge/telegram-join-1DA1F2?style=for-the-badge&logo=telegram)](https://t.me/yii_framework_in_english)
-[![Slack](https://img.shields.io/badge/slack-join-1DA1F2?style=for-the-badge&logo=slack)](https://yiiframework.com/go/slack)
 
-## License
+- AI Disease Prediction
+- Machine Learning Patient Risk Analysis
+- Mobile Application
+- SMS Notification System
+- Telemedicine Support
+- IoT Vital Monitoring
+- AI Clinical Decision Support
+- Hospital Digital Twin
 
-[![License](https://img.shields.io/badge/License-BSD--3--Clause-brightgreen.svg?style=for-the-badge&logo=opensourceinitiative&logoColor=white&labelColor=555555)](LICENSE.md)
+
+---
+
+# 👨‍💻 Developer
+
+
+**Daniel Melick Mwajombe**
+
+Health Analytics System Project
+
+
+---
+
+# 📄 License
+
+
+This project is developed for healthcare management, hospital automation and analytics purposes.
