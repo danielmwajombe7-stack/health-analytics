@@ -1,4 +1,4 @@
-# 🏥 Health Analytics System (HAS)
+# 🏥Myles Health Analytics System (MHAS)
 
 <p align="center">
     <img src="https://www.yiiframework.com/image/design/logo/yii2.svg" width="180" alt="Yii2 Framework">
